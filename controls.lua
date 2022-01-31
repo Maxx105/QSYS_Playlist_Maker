@@ -4,7 +4,8 @@ table.insert(ctrls, {
   ButtonType = "Trigger",
   UserPin = true,
   PinStyle = "Both",
-  Count = 1
+  Count = 1,
+  Icon = "Arrow Right"
 })
 table.insert(ctrls, {
   Name = "PreviousSong",
@@ -12,7 +13,8 @@ table.insert(ctrls, {
   ButtonType = "Trigger",
   UserPin = true,
   PinStyle = "Both",
-  Count = 1
+  Count = 1,
+  Icon = "Arrow Left"
 })
 table.insert(ctrls, {
   Name = "SubmitSongInfo",
@@ -20,7 +22,8 @@ table.insert(ctrls, {
   ButtonType = "Trigger",
   UserPin = true,
   PinStyle = "Both",
-  Count = 1
+  Count = 1,
+  Icon = "Plus"
 })
 table.insert(ctrls, {
   Name = "RemoveSong",
