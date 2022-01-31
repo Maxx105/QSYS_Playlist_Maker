@@ -4,13 +4,14 @@ table.insert(graphics,{
   Fill = {200,200,200},
   StrokeWidth = 1,
   Position = {6,5},
-  Size = {303,576}
+  Size = {303,576},
+  CornerRadius = 8
 })
 table.insert(graphics,{
   Type = "Text",
   Text = "Audio Player:",
   Position = {45,107},
-  Size = {72,16},
+  Size = {82,16},
   FontSize = 12,
   HTextAlign = "Left"
 })
@@ -18,7 +19,7 @@ table.insert(graphics,{
   Type = "Text",
   Text = "Songs:",
   Position = {45,123},
-  Size = {72,16},
+  Size = {82,16},
   FontSize = 12,
   HTextAlign = "Left"
 })
@@ -26,7 +27,7 @@ table.insert(graphics,{
   Type = "Text",
   Text = "Directory:",
   Position = {45,139},
-  Size = {72,16},
+  Size = {82,16},
   FontSize = 12,
   HTextAlign = "Left"
 })
@@ -34,7 +35,7 @@ table.insert(graphics,{
   Type = "Text",
   Text = "File:",
   Position = {45,155},
-  Size = {72,16},
+  Size = {82,16},
   FontSize = 12,
   HTextAlign = "Left"
 })

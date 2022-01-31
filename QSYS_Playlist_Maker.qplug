@@ -4,7 +4,7 @@
 
 -- Information block for the plugin
 PluginInfo = {
-  Name = "Playlist Maker",
+  Name = "My Plugins~Playlist Maker",
   Version = "0.0",
   BuildVersion = "0.0.0.0",
   Id = "1e886705-4f8b-403e-9a2f-02bdb899a0db",
@@ -23,9 +23,12 @@ function GetPrettyName(props)
 end
 
 -- Optional function used if plugin has multiple pages
-PageNames = { "Control", "Setup" }  --List the pages within the plugin
+PageNames = { "Control "}  --List the pages within the plugin
 function GetPages(props)
   local pages = {}
+  for ix,name in ipairs(PageNames) do
+    table.insert(pages, {name = PageNames[ix]})
+  end
   return pages
 end
 
@@ -85,15 +88,95 @@ end
 -- Defines the Controls used within the plugin
 function GetControls(props)
   local ctrls = {}
-  -- table.insert(ctrls, {
-  --   Name = "SendButton",
-  --   ControlType = "Button",
-  --   ButtonType = "Momentary",
-  --   Count = 1,
-  --   UserPin = true,
-  --   PinStyle = "Input",
-  --   Icon = "Power"
-  -- })
+  table.insert(ctrls, {
+    Name = "NextSong",
+    ControlType = "Button",
+    ButtonType = "Trigger",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "PreviousSong",
+    ControlType = "Button",
+    ButtonType = "Trigger",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "SubmitSongInfo",
+    ControlType = "Button",
+    ButtonType = "Trigger",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "RemoveSong",
+    ControlType = "Button",
+    ButtonType = "Trigger",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "UpdateSong",
+    ControlType = "Button",
+    ButtonType = "Trigger",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "Songs",
+    ControlType = "Text",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "AddName",
+    ControlType = "Text",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "AddTime",
+    ControlType = "Text",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "AudioPlayerSelect",
+    ControlType = "Text",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "ListOfSongs",
+    ControlType = "Text",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "AllDirectories",
+    ControlType = "Text",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
+  table.insert(ctrls, {
+    Name = "AllFiles",
+    ControlType = "Text",
+    UserPin = true,
+    PinStyle = "Both",
+    Count = 1
+  })
   return ctrls
 end
 
@@ -101,22 +184,63 @@ end
 function GetControlLayout(props)
   local layout = {}
   local graphics = {}
-  -- table.insert(graphics,{
-  --   Type = "GroupBox",
-  --   Text = "Control",
-  --   Fill = {200,200,200},
-  --   StrokeWidth = 1,
-  --   Position = {5,5},
-  --   Size = {200,100}
-  -- })
-  -- table.insert(graphics,{
-  --   Type = "Text",
-  --   Text = "Say Hello:",
-  --   Position = {10,42},
-  --   Size = {90,16},
-  --   FontSize = 14,
-  --   HTextAlign = "Right"
-  -- })
+  table.insert(graphics,{
+    Type = "GroupBox",
+    Text = "Playlist Maker",
+    Fill = {200,200,200},
+    StrokeWidth = 1,
+    Position = {6,5},
+    Size = {303,576},
+    CornerRadius = 8
+  })
+  table.insert(graphics,{
+    Type = "Text",
+    Text = "Audio Player:",
+    Position = {45,107},
+    Size = {82,16},
+    FontSize = 12,
+    HTextAlign = "Left"
+  })
+  table.insert(graphics,{
+    Type = "Text",
+    Text = "Songs:",
+    Position = {45,123},
+    Size = {82,16},
+    FontSize = 12,
+    HTextAlign = "Left"
+  })
+  table.insert(graphics,{
+    Type = "Text",
+    Text = "Directory:",
+    Position = {45,139},
+    Size = {82,16},
+    FontSize = 12,
+    HTextAlign = "Left"
+  })
+  table.insert(graphics,{
+    Type = "Text",
+    Text = "File:",
+    Position = {45,155},
+    Size = {82,16},
+    FontSize = 12,
+    HTextAlign = "Left"
+  })
+  table.insert(graphics,{
+    Type = "Text",
+    Text = "Name",
+    Position = {35,185},
+    Size = {167,18},
+    FontSize = 12,
+    HTextAlign = "Center"
+  })
+  table.insert(graphics,{
+    Type = "Text",
+    Text = "Time",
+    Position = {202,185},
+    Size = {75,16},
+    FontSize = 12,
+    HTextAlign = "Center"
+  })
   -- layout["SendButton"] = {
   --   PrettyName = "Buttons~Send The Command",
   --   Style = "Button",
