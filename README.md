@@ -8,7 +8,7 @@ Click [here](https://qsc0-my.sharepoint.com/:f:/g/personal/maxx_sanner_qsc_com/E
 
 ## How to Use
 
-* Simply download the plugin and add it to your C:\Users\< user >\Documents\QSC\Q-Sys Designer\Plugins folder. 
+* Simply download the plugin and add it to your C:\Users\user\Documents\QSC\Q-Sys Designer\Plugins folder. 
 * Drag into your schematic from the plugins section of your Schematic Elements. 
 * You will need at least one named audio player component in the design. If you do not have an audio player component, the plugin will tell you do not have one. 
 * Once you have a named audio component, it should auto-populate in the "Audio Player" field. If you have multiple audio players, you can click on this field to get a drop-down so that you can select the correct one.
