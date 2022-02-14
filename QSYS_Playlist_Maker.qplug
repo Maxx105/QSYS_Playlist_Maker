@@ -1,6 +1,6 @@
--- Basic Framework Plugin
--- by QSC
--- October 2020
+-- Playlist Maker Plugin
+-- by Maxx Sanner
+-- January 2022
 
 -- Information block for the plugin
 PluginInfo = {
